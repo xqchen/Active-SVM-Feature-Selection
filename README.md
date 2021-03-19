@@ -3,7 +3,7 @@
 Data
 ----------
 
-To test the performance of the method in paper "Scalable Construction of Compressed Gene-sets from Single-cell Data Using Active Feature Selection", we applied our active feature selection method to extract minimal classifying gene sets for human PBMCs. Specifically, we applied the method to a data set from ["Massively parallel digital transcriptional profiling of single cells"](https://www.nature.com/articles/ncomms14049) that contains 10194 cells profiled via single-cell transcriptional profiling. We used Louvain clustering to identify T-cells, activated T/NK cells, B-cells, and  Monocytes). You can download the data [PBMCnorm_final.csv](https://www.dropbox.com/h?preview=PBMCnorm_final.csv)
+To test the performance of the method in paper "Scalable Construction of Compressed Gene-sets from Single-cell Data Using Active Feature Selection", we applied our active feature selection method to extract minimal classifying gene sets for human PBMCs. Specifically, we applied the method to a data set from ["Massively parallel digital transcriptional profiling of single cells"](https://www.nature.com/articles/ncomms14049) that contains 10194 cells profiled via single-cell transcriptional profiling. We used Louvain clustering to identify T-cells, activated T/NK cells, B-cells, and  Monocytes). You can download the data [PBMCnorm_final.csv](https://www.dropbox.com/s/eqxtpnyooz3pnl9/PBMCnorm_final.csv?dl=0)
 
 Preprocessing
 ----------
