@@ -8,6 +8,8 @@ To test the performance of the method in paper "Scalable Construction of Compres
 Preprocessing
 ----------
 
+After loading the dataset, we first normalize the data by dividing the column sum (cells). Then we filter out genes by Poisson. And we rescale and log the data. For more information of processing, please look at processing.ipynb. 
+
 Parameters
 ----------
 
