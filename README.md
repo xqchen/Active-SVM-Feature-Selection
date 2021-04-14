@@ -12,12 +12,18 @@ We applied the method to a data set from ["Massively parallel digital transcript
 Preprocessing
 ----------
 
-After loading the dataset, we first normalize the data by dividing the column sum (cells). Then we filter out genes by Poisson. And we rescale and log the data. For more information of processing, please look at processing.ipynb. 
+The data we would load in main.ipynb is already preprocessed. We only need to do 'l2'-norm along each cell to train SVM better and faster. 
+
+For other datasets, preprocessing.ipynb should be good guidance for data preprocessing. It first normalizes the data by dividing the column sum (cells) then rescales and logs the data. If you want a smaller dataset, you could filter out genes by Poisson.
 
 Parameters
 ----------
 
-We select 100 genes totally and use 100 cells at each step. Hence the parameter num_feature=100 and num_samples=100.
+There are three hyper-parameters we need to set: balance, num_features, num_samples.
+
+- balance(boolean) : balance the number of cells of each class or just randomly select cells at each loop
+- num_features(int) : the total number of genes we want to select 
+- num_samples(int) : the number of cells we would use at each loop
 
 
 Compare with Other Methods
@@ -28,7 +34,8 @@ Our active SVM feature selection(ASFS) strategy iteratively selects cells and co
 Advantages of Our Methods
 ----------
 
-A key benefit of the active learning strategy is that a relatively small fraction of the data set is analyzed, so that the procedure can generate these gene sets while only computing across 200-300 cells. At each iteration, a set number of mis-classified cells (n=100) are selected but the total number of cells used does not increase in increments of 100, since some cells are repeatedly mis-classified and are thus repeatedly used for each iteration.
+A key benefit of the active learning strategy is that is fast. The first reason is that a relatively small fraction of the data set is analyzed, so that the procedure can generate these gene sets while only computing across a small subset of cells. The other reason is that the program implement it in parallel using parfor package. 
+
 In addition to enabling classification of the cell-types in the data set, the ASFS gene sets provide a low-dimensional space in which to analyze the data. When we reduced our analysis to consider only the top 100 genes selected by the ASFS algorithm, we can generate a low-dimensional representations of the cell population (t-SNE) that preserve important structural features of the data including the distinct cell-type clusters.
 
 Result Figures
