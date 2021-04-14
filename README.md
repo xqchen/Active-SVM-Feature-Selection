@@ -34,7 +34,7 @@ Our active SVM feature selection(ASFS) strategy iteratively selects cells and co
 Advantages of Our Methods
 ----------
 
-A key benefit of the active learning strategy is that is fast. The first reason is that a relatively small fraction of the data set is analyzed, so that the procedure can generate these gene sets while only computing across a small subset of cells. The other reason is that the program implement it in parallel using parfor package. 
+A key benefit of the active learning strategy is that is fast. The first reason is that a relatively small fraction of the data set is analyzed, so that the procedure can generate these gene sets while only computing across a small subset of cells. The other reason is that the program implement it in parallel using [parfor](https://pypi.org/project/parfor/) package. 
 
 In addition to enabling classification of the cell-types in the data set, the ASFS gene sets provide a low-dimensional space in which to analyze the data. When we reduced our analysis to consider only the top 100 genes selected by the ASFS algorithm, we can generate a low-dimensional representations of the cell population (t-SNE) that preserve important structural features of the data including the distinct cell-type clusters.
 
