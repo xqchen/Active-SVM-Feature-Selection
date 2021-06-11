@@ -1,4 +1,4 @@
-# Scalable-Construction-of-Compressed-Gene-sets-from-Single-cell-Data-Using-Active-Feature-Selection
+# Active feature selection discovers minimal gene-sets for classifying cell-types and disease states in single-cell mRNA-seq data
 
 To test the performance of the method in paper "Scalable Construction of Compressed Gene-sets from Single-cell Data Using Active Feature Selection", we applied our active feature selection method to extract minimal classifying gene sets for human PBMCs.
 
