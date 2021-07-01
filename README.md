@@ -2,7 +2,7 @@
 
 To test the performance of the method in paper "Scalable Construction of Compressed Gene-sets from Single-cell Data Using Active Feature Selection", we applied our active feature selection method to extract minimal classifying gene sets for human PBMCs.
 
-Run "main.ipynb" directly. 
+Run "min_complexity.ipynb" and "min_cell.ipynb" directly. 
 
 Data
 ----------
@@ -12,7 +12,7 @@ We applied the method to a data set from ["Massively parallel digital transcript
 Preprocessing
 ----------
 
-The data we would load in main.ipynb is already preprocessed. We only need to do 'l2'-norm along each cell to train SVM better and faster. 
+The data we would load in min_cell.ipynb and min_complexity.ipynb is already preprocessed. 
 
 For other datasets, preprocessing.ipynb should be good guidance for data preprocessing. It first normalizes the data by dividing the column sum (cells) then rescales and logs the data. If you want a smaller dataset, you could filter out genes by Poisson.
 
